@@ -33,8 +33,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void download() async {
     try {
-      http.Response response =
-          await http.get("http://www.ysts8.com/index_hot.html");
+      http.Response response = await http.get(
+        Uri(
+          scheme: "http",
+          host: "ysts8.com",
+          path: "index_hot.html",
+        ),
+      );
       String data = gbk.decode(response.bodyBytes);
       setState(() {
         _text = data;

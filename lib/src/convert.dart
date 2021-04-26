@@ -40,7 +40,7 @@ class GbkCodec extends Encoding {
 
 int unicode2gbkOne(int unicode) {
 
-  int offset;
+  late int offset;
 
   if (unicode <= 0x9FA5)
     offset = unicode - 0x4E00;
